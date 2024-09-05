@@ -1,18 +1,19 @@
-name: My First Workflow
-on: push
+name: 01 - Building Blocks
+
+on: workflow_dispatch
 
 jobs:
-    first_job:
+    job-1:
         runs-on: ubuntu-latest
         steps:
-        - name: welcome message
-          run: echo "My first Github Actions job"
-        
-        - name: list files
-          run: ls
-        
-        - name: read file
-          run: cat README.md
+            - name: job-1 step-1
+              run: |
+                echo "hello, world! from job-1 step-1 "
+                hostname
 
-        - name: read file2
-          run: cat README.md
+    job-2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: job-2 step-1
+              run: |
+                hostname
